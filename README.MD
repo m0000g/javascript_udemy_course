@@ -5,3 +5,9 @@ Git hub Course complete code: https://github.com/jonasschmedtmann/complete-javas
 Discord Community: https://discord.gg/uhMkpf4
 Resources page: https://codingheroes.io/resources/
 
+# Assigments
+
+## LECTURE: Values and Variables
+1. Declare variables called 'country', 'continent' and 'population' and 
+assign their values according to your own country (population in millions)
+2. Log their values to the console
