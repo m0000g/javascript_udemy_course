@@ -15,7 +15,6 @@ const continent = "Central America";
 let population = 13000000;
 const isIland = false;
 const language = "Spanish";
-const idioma = "English";
 const finland = 6000000;
 const averageCountryPopulation = 33000000;
 
