@@ -58,7 +58,7 @@ if ((averageScoreDolphins > averageScoreKoalas) && averageScoreDolphins >= 100) 
 else if ((averageScoreKoalas > averageScoreDolphins) && averageScoreKoalas >= 100) {
     console.log(`The Koalas won! 🐨`);
 }
-else if (averageScoreDolphins === averageScoreKoalas) { console.log(`It's a tie 🐬💗🐨`); }
+else if (averageScoreDolphins === averageScoreKoalas && averageScoreDolphins >= 100 && averageScoreKoalas >= 100) { console.log(`It's a tie 🐬💗🐨`); }
 else {
     console.log(`Nobody wins 🐬💔🐨`);
 }
