@@ -18,23 +18,46 @@ Test data:
 § Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
 § Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106 */
 
-const dolphinsScore1 = 96;
+// Data 1
+/* const dolphinsScore1 = 96;
 const dolphinsScore2 = 108;
 const dolphinsScore3 = 89;
 
 const koalasScore1 = 88;
 const koalasScore2 = 91;
-const koalasScore3 = 110;
+const koalasScore3 = 110; */
+
+// Data 2
+/* const dolphinsScore1 = 97;
+const dolphinsScore2 = 112;
+const dolphinsScore3 = 101;
+
+const koalasScore1 = 109;
+const koalasScore2 = 95;
+const koalasScore3 = 123; */
+
+
+// Data 3
+const dolphinsScore1 = 97;
+const dolphinsScore2 = 112;
+const dolphinsScore3 = 101;
+
+const koalasScore1 = 109;
+const koalasScore2 = 95;
+const koalasScore3 = 106;
+
 
 const averageScoreDolphins = (dolphinsScore1 + dolphinsScore2 + dolphinsScore3) / 3;
 const averageScoreKoalas = (koalasScore1 + koalasScore2 + koalasScore3) / 3;
 
-if (averageScoreDolphins > averageScoreKoalas) {
+console.log(`🐬: ${averageScoreDolphins}`, `🐨: ${averageScoreKoalas}`)
+
+if ((averageScoreDolphins > averageScoreKoalas) && averageScoreDolphins > 100) {
     console.log(`The Dolphins won! 🐬`);
 }
-else if (averageScoreDolphins === averageScoreKoalas) {
-    console.log(`It's a tie 🐬💗🐨`);
+else if ((averageScoreKoalas > averageScoreDolphins) && averageScoreKoalas > 100) {
+    console.log(`The Koalas won! 🐨`);
 }
 else {
-    console.log(`The Koalas won! 🐨`);
+    console.log(`It's a tie 🐬💗🐨`);
 }
