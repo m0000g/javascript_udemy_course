@@ -52,12 +52,13 @@ const averageScoreKoalas = (koalasScore1 + koalasScore2 + koalasScore3) / 3;
 
 console.log(`🐬: ${averageScoreDolphins}`, `🐨: ${averageScoreKoalas}`)
 
-if ((averageScoreDolphins > averageScoreKoalas) && averageScoreDolphins > 100) {
+if ((averageScoreDolphins > averageScoreKoalas) && averageScoreDolphins >= 100) {
     console.log(`The Dolphins won! 🐬`);
 }
-else if ((averageScoreKoalas > averageScoreDolphins) && averageScoreKoalas > 100) {
+else if ((averageScoreKoalas > averageScoreDolphins) && averageScoreKoalas >= 100) {
     console.log(`The Koalas won! 🐨`);
 }
+else if (averageScoreDolphins === averageScoreKoalas) { console.log(`It's a tie 🐬💗🐨`); }
 else {
-    console.log(`It's a tie 🐬💗🐨`);
+    console.log(`Nobody wins 🐬💔🐨`);
 }
