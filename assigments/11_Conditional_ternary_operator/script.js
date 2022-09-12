@@ -15,6 +15,6 @@ let population = 5094114; // A bit more of 5 millions
 const isIland = false;
 const language = "Spanish";
 
-const isAverage = population >= 33000000 ? `${country}'s population is above average.` : `${country}'s population is bellow average.`
+const isAverage = population > 33000000 ? `${country}'s population is above average.` : `${country}'s population is bellow average.`
 
 console.log(isAverage);
