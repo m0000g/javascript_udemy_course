@@ -3,7 +3,6 @@ const continent = "Central America";
 const population = "5,094,114";
 const isIland = false;
 const language = "Spanish";
-const idioma = "English";
 
 console.log(country);
 console.log(continent);
