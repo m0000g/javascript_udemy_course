@@ -19,7 +19,7 @@ let population = 5094114; // A bit more of 5 millions
 const isIland = false;
 const language = "Spanish";
 
-if ((population => 50000000) && (language === "English")) {
+if ((population < 50000000) && (language === "English")) {
     console.log(`'You should live in ${country} 😀`);
 }
 else {
