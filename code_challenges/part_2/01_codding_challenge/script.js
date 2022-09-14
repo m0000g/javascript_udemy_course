@@ -28,10 +28,10 @@ const checkWinner = function (avgDolphins, avgKoalas) {
     // A team only wins if it has at least double the average score of the other team. 
     // Otherwise, no team wins!
     if (avgDolphins >= (avgKoalas * 2)) {
-        return console.log(`The Dolphins 🐬 won!`);
+        return console.log(`The Dolphins 🐬 won! (${avgDolphins} vs ${avgKoalas})`);
     }
     else if (avgKoalas >= (avgDolphins * 2)) {
-        return console.log(`The Koalas 🐨 won!`);
+        return console.log(`The Koalas 🐨 won! (${avgKoalas} vs ${avgDolphins})`);
     }
     else {
         return console.log(`No team wins 💔`);
