@@ -49,6 +49,6 @@ checkWinner(avgDolhins1, avgKoalas1);
 // Data 2
 const avgDolhins2 = calcAverage(85, 54, 41);
 console.log(avgDolhins2);
-const avgKoalas2 = calcAverage(23, 3, 27);
+const avgKoalas2 = calcAverage(23, 34, 27);
 console.log(avgKoalas2);
 checkWinner(avgDolhins2, avgKoalas2);
