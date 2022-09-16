@@ -109,6 +109,50 @@ one word changes between these two sentences!
 2. After checking the result, change the population temporarily to 13 and then to 
 130. See the different results, and set the population back to original
 
+## LECTURE: Functions
+1. Write a function called 'describeCountry' which takes three parameters: 
+'country', 'population' and 'capitalCity'. Based on this input, the 
+function returns a string with this format: 'Finland has 6 million people and its 
+capital city is Helsinki'
+2. Call this function 3 times, with input data for 3 different countries. Store the 
+returned values in 3 different variables, and log them to the console
+
+## LECTURE: Function Declarations vs. Expressions
+1. The world population is 7900 million people. Create a function declaration
+called 'percentageOfWorld1' which receives a 'population' value, and
+returns the percentage of the world population that the given population 
+represents. For example, China has 1441 million people, so it's about 18.2% of 
+the world population
+2. To calculate the percentage, divide the given 'population' value by 7900 
+and then multiply by 100
+3. Call 'percentageOfWorld1' for 3 populations of countries of your choice, 
+store the results into variables, and log them to the console
+4. Create a function expression which does the exact same thing, called 
+'percentageOfWorld2', and also call it with 3 country populations (can be 
+the same populations)
+
+## LECTURE: Arrow Functions
+1. Recreate the last assignment, but this time create an arrow function called 
+'percentageOfWorld3'
+
+## LECTURE: Functions Calling Other Functions
+1. Create a function called 'describePopulation'. Use the function type you 
+like the most. This function takes in two arguments: 'country' and 
+'population', and returns a string like this: 'China has 1441 million people, 
+which is about 18.2% of the world.'
+2. To calculate the percentage, 'describePopulation' call the 
+'percentageOfWorld1' you created earlier
+3. Call 'describePopulation' with data for 3 countries of your choice
+
+## LECTURE: Introduction to Arrays
+1. Create an array containing 4 population values of 4 countries of your choice. 
+You may use the values you have been using previously. Store this array into a 
+variable called 'populations'
+2. Log to the console whether the array has 4 elements or not (true or false)
+3. Create an array called 'percentages' containing the percentages of the 
+world population for these 4 population values. Use the function 
+'percentageOfWorld1' that you created earlier to compute the 4 
+percentage values
 
 # Codding Challenges
 
@@ -209,6 +253,42 @@ Test data:
 
 - Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
 - Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+
+### Coding Challenge #2
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of 
+the bill if the bill value is between 50 and 300, and if the value is different, the tip is 
+20%.
+Your tasks:
+1. Write a function 'calcTip' that takes any bill value as an input and returns 
+the corresponding tip, calculated based on the rules above (you can check out 
+the code from first tip calculator challenge if you need to). Use the function 
+type you like the most. Test the function using a bill value of 100
+2. And now let's use arrays! So create an array 'bills' containing the test data 
+below
+3. Create an array 'tips' containing the tip value for each bill, calculated from 
+the function you created before
+4. Bonus: Create an array 'total' containing the total values, so the bill + tip
+Test data: 125, 555 and 44
+Hint: Remember that an array needs a value in each position, and that value can 
+actually be the returned value of a function! So you can just call a function as array 
+values (so don't store the tip values in separate variables first, but right in the new 
+array)
+
+
+### Coding Challenge #3
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to 
+implement the calculations! Remember: BMI = mass / height ** 2 = mass 
+/ (height * height) (mass in kg and height in meter)
+Your tasks:
+1. For each of them, create an object with properties for their full name, mass, and 
+height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same 
+method on both objects). Store the BMI value to a property, and also return it 
+from the method
+3. Log to the console who has the higher BMI, together with the full name and the 
+respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m 
+tall.
 
 
 > All exercises are from Udemy course:
