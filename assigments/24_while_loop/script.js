@@ -17,7 +17,8 @@ const percentages2 = [];
 let i = 0;
 
 while (i < populations.length) {
-    percentages2[i] = percentageOfWorld1(populations[i]);
+    // percentages2[i] = percentageOfWorld1(populations[i]);
+    percentages2.push(percentageOfWorld1(populations[i]));
     i++;
 }
 
