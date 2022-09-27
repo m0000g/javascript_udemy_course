@@ -47,8 +47,9 @@ const calcAverage = function (arr) {
 }
 
 for (let i = 0; i < bills.length; i++) {
-    tips.push(calcTip(bills[i]));
-    totals.push(bills[i] + tips[i]);
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(bills[i] + tip);
 }
 
 console.log(`Bills: ${bills}`);
