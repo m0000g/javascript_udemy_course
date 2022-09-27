@@ -27,8 +27,10 @@ if (!neighbours.includes(`Germany`)) {
     console.log(`Probably not a central European country 😂`);
 }
 console.log(`> Change one neighbour with Tahití`);
-const indexCountry = neighbours.indexOf(`Nicaragua`);
-neighbours[indexCountry] = `Tahití`;
+// const indexCountry = neighbours.indexOf(`Nicaragua`);
+// neighbours[indexCountry] = `Tahití`;
+neighbours[neighbours.indexOf(`Nicaragua`)] = `Tahití`;
+
 console.log(neighbours);
 
 if (neighbours.includes(`Tahití`)) {
