@@ -23,7 +23,7 @@ function percentageOfWorld1(population) {
 
 const chinaPercentagePopulation = percentageOfWorld1(1441);
 const costaricaPercentagePopulation = percentageOfWorld1(5);
-const unitedstatesPercentagePopulation = percentageOfWorld1(331);
+const unitedstatesPercentagePopulation = percentageOfWorld1(332);
 
 console.log(`China: ${chinaPercentagePopulation}`);
 console.log(`Costa Rica: ${costaricaPercentagePopulation}`);
@@ -32,4 +32,4 @@ console.log(`United States: ${unitedstatesPercentagePopulation}`);
 const percentageOfWorld2 = function (population) { return `${(population / worldPopulation) * 100} % of the Population`; }
 console.log(percentageOfWorld2(1441));
 console.log(percentageOfWorld2(5));
-console.log(percentageOfWorld2(331));
+console.log(percentageOfWorld2(332));
