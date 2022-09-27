@@ -25,18 +25,38 @@ const bmiCalculate = function (mass, height) {
     return mass / height ** 2;
 }
 
-const mark = [`Mark Miller`, 78, 1.69, bmiCalculate(78, 1.69)];
-const john = [`John Smith`, 98, 1.95, bmiCalculate(98, 1.95)];
+const mark = {
+    fullName: `Mark Miller`,
+    mass: 78,
+    height: 1.69,
 
-console.log(mark);
-console.log(john);
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
 
-if (mark[mark.length - 1] > john[john.length - 1]) {
-    console.log(`Mark's BMI (${mark[mark.length - 1]}) is higher than Jhon's (${john[john.length - 1]})!)`);
+
+};
+
+const john = {
+    fullName: `John Smith`,
+    mass: 98,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / this.height ** 2;
+        return this.bmi;
+    }
+};
+
+mark.calcBMI();
+john.calcBMI();
+
+if (mark.bmi > john.bmi) {
+    console.log(`Mark's BMI (${mark.bmi}) is higher than Jhon's (${john.bmi})!)`);
 }
-else if (john[john.length - 1] > mark[mark.length - 1]) {
-    console.log(`Jhon's BMI (${john[john.length - 1]}) is higher than Marks's (${mark[mark.length - 1]})!)`);
+else if (john.bmi > mark.bmi) {
+    console.log(`Jhon's BMI (${john.bmi}) is higher than Marks's (${mark.bmi})!)`);
 }
 else {
-    console.log(`Mark and Jhon have the same BMI of ${mark[mark.length - 1]}`)
+    console.log(`Mark and Jhon have the same BMI of ${mark.bmi}`)
 }
