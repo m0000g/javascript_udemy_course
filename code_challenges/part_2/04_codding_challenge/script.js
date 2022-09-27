@@ -39,9 +39,9 @@ const calcTip = function (bill) {
 const calcAverage = function (arr) {
     let sum = 0;
     for (let x = 0; x < arr.length; x++) {
-        console.log(arr[x]);
+        // console.log(arr[x]);
         sum += arr[x];
-        console.log(`Sum: ${sum}`);
+        // console.log(`Sum: ${sum}`);
     }
     return sum / arr.length;
 }
