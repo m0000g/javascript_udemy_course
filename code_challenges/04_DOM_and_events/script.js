@@ -19,7 +19,6 @@ let highscore = 0;
 
 const messageOriginal = document.querySelector('.message').textContent;
 const numberOriginal = document.querySelector('.number').textContent;
-const scoreOriginal = document.querySelector('.score').textContent;
 const styleBodyOriginal = document.querySelector('body').style.backgroundColor;
 const styleNumberOriginal = document.querySelector('.number').style.width;
 
@@ -70,7 +69,7 @@ document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   document.querySelector('.message').textContent = messageOriginal;
   document.querySelector('.number').textContent = numberOriginal;
-  document.querySelector('.score').textContent = scoreOriginal;
+  document.querySelector('.score').textContent = score;
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = styleBodyOriginal;
   document.querySelector('.number').style.width = styleNumberOriginal;
