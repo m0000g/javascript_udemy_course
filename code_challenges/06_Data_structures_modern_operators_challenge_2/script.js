@@ -71,19 +71,19 @@ console.log(average); */
 // Get the team names directly from the game object, don't hardcode them  (except for "draw").
 // Hint: Note how the odds and the game objects have the same property names
 
-// My solution
-for (const [key, value] of Object.entries(game.odds)) {
+// My solution a bit crazy, not really good
+/* for (const [key, value] of Object.entries(game.odds)) {
   console.log(
     `Odd of ${game[key] ? 'victory ' : 'draw'}${game[key] || ''}: ${value}`
   );
-}
+} */
 
 // Teacher's solution
-/* for (const [team, odd] of Object.entries(game.odds)) {
+for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of ${teamStr} ${odd}`);
 }
- */
+
 // 4. Bonus: Create an object called 'scorers' which contains the names of the
 // players who scored as properties, and the number of goals as the value. In this
 // game, it will look like this:
