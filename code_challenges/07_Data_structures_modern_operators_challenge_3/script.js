@@ -42,7 +42,8 @@ console.log(`gameEvents without minute 64: `);
 console.log(gameEvents);
 
 // 3. Compute and log the following string to the console: "An event happened, on average, every 9 minutes" (keep in mind that a game has 90 minutes)
-const newArray = new Array(...gameEvents.keys());
+
+/* const newArray = new Array(...gameEvents.keys());
 console.log(`New Array, only keys: `);
 console.log(newArray);
 const initialvalue = 0;
@@ -56,10 +57,15 @@ console.log(
   `An event happened, on average, every ${Math.round(
     sum / difference.length
   )}  minutes`
+); */
+// Correct answer
+console.log(
+  `An event happened, on average, every ${90 / gameEvents.size}  minutes`
 );
 
 // 4. Loop over 'gameEvents' and log each element to the console, marking whether it's in the first half or second half (after 45 min) of the game, like this: [FIRST HALF] 17: ⚽ GOAL
-let half = '';
+
+/* let half = '';
 for (const [key, value] of gameEvents) {
   if (key < 45) {
     half = 'FIRST';
@@ -67,4 +73,11 @@ for (const [key, value] of gameEvents) {
     half = 'SECOND';
   }
   console.log(`[${half} HALF] ${key}: ${value}`);
+} */
+
+// Correct answer
+
+for (const [min, event] of gameEvents) {
+  const half = min < 45 ? 'FIRST' : 'SECOND';
+  console.log(`[${half} HALF] ${min}: ${event}`);
 }
