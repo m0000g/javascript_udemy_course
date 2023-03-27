@@ -35,19 +35,19 @@ document.body.append(document.createElement('button'));
 // 1.- Receives list of variables and transform them from underscore_case to camelCase.
 const convertCamelCase = function (array) {
   //console.log(array);
-  for (const str of array) {
-    const strArray = str.toLowerCase().split('_');
+  for (const [i, str] of array.entries()) {
+    const strArray = str.toLowerCase().trim().split('_');
     let newString = ' ';
     for (const word of strArray) {
       if (newString !== ' ') {
         newString = newString.concat(
-          word.replace(word[0], word[0].toUpperCase().trim())
+          word.replace(word[0], word[0].toUpperCase())
         );
       } else {
-        newString = word.trim();
+        newString = word;
       }
     }
-    console.log(`${newString} ${'✅'.repeat(array.indexOf(str) + 1)}`);
+    console.log(`${newString.padEnd(20, ' ')} ${'✅'.repeat(i + 1)}`);
   }
 };
 
