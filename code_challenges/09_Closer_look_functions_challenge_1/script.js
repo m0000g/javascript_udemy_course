@@ -50,21 +50,17 @@ const poll = {
   registerNewAnswer: function () {
     let message = `${this.question}\n${this.options.join(
       '\n'
-    )} \n (Write option number)`;
+    )}\n(Write option number)`;
 
     const answer = prompt(`${message ? message : undefined}`);
     if (answer) {
       const answerNumber = Number(answer);
-      if (typeof answerNumber == 'number') {
-        if (answerNumber >= 0 && answerNumber <= 3) {
-          console.log('Number allowed');
-          this.answers[answerNumber]++;
-        } else {
-          console.log('Number not allowed');
-        }
-      } else {
-        console.log('Please, insert a number');
-      }
+      if (
+        typeof answerNumber == 'number' &&
+        answerNumber >= 0 &&
+        answerNumber < this.answers.length
+      )
+        this.answers[answerNumber]++;
     }
     this.displayResults('string');
   },
