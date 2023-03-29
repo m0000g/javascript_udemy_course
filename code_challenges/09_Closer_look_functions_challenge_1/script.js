@@ -62,13 +62,13 @@ const poll = {
       )
         this.answers[answerNumber]++;
     }
+    this.displayResults();
     this.displayResults('string');
   },
-  displayResults: function (typeFunction) {
-    console.log(typeFunction);
-    if (typeFunction == 'string') {
-      console.log(`Poll results: ${this.answers.join(',')}`);
-    } else if (typeFunction === 'array') {
+  displayResults: function (type = 'array') {
+    if (type == 'string') {
+      console.log(`Poll results: ${this.answers.join(', ')}`);
+    } else if (type === 'array') {
       console.log(this.answers);
     }
   },
@@ -86,11 +86,9 @@ const data2 = {
   answers: [1, 5, 3, 9, 6, 1],
 };
 
-console.log(data1);
-
 const displayResultsNew = poll.displayResults;
 displayResultsNew.call(data1, 'string');
 displayResultsNew.call(data2, 'string');
 
-displayResultsNew.call(data1, 'array');
-displayResultsNew.call(data2, 'array');
+displayResultsNew.call(data1);
+displayResultsNew.call(data2);
