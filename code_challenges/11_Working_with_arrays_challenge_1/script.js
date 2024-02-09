@@ -35,29 +35,45 @@ GOOD LUCK
 
 */
 
-const dogsJulia = [3, 5, 2, 12, 7];
-const dogsKate = [4, 1, 15, 8, 3];
-
-/*
-const dogsJulia = [9, 16, 6, 8, 3];
-const dogsKate = [10, 5, 6, 1, 4];
-*/
+const dataSet1 = { dogsJulia: [3, 5, 2, 12, 7], dogsKate: [4, 1, 15, 8, 3] };
+const dataSet2 = { dogsJulia: [9, 16, 6, 8, 3], dogsKate: [10, 5, 6, 1, 4] };
 
 /* 1. Julia found out that the owners of the first and the last two dogs actually have
 cats, not dogs! So create a shallow copy of Julia's array, and remove the cat
 ages from that copied array (because it's a bad practice to mutate function
 parameters) */
 
-const dogsJuliaCopy = [...dogsJulia];
-console.log(dogsJuliaCopy);
-dogsJuliaCopy.shift();
-dogsJuliaCopy.splice(-2);
-console.log(dogsJuliaCopy);
+const fixinData = function (array) {
+  const arrayCopy = [...array];
+  arrayCopy.shift();
+  arrayCopy.splice(-2);
+  return arrayCopy;
+};
+
+let dogsJuliaCopy = fixinData(dataSet1.dogsJulia);
+
+/* 2. Create an array with both Julia's (corrected) and Kate's data */
+/* const data1 = [...dogsJuliaCopy, ...dogsKate];
+console.log(data1); // [ 5, 2, 4, 1, 15, 8, 3 ] */
+
+const newDataSet1 = [...fixinData(dataSet1.dogsJulia), ...dataSet1.dogsKate];
+const newDataSet2 = [...fixinData(dataSet2.dogsJulia), ...dataSet2.dogsKate];
+
+/* 3. For each remaining dog, log to the console whether it's an adult ("Dog number 1
+is an adult, and is 5 years old") or a puppy ("Dog number 2 is still a puppy 🐶")*/
 
 /* Function */
 
-function checkDogs(dogsJulia, dogsKate) {
-  console.log('test');
+function checkDogs(data) {
+  data.forEach(function (dog, i) {
+    if (dog >= 3) {
+      console.log(`Dog number ${i + 1} is an adult, and is ${dog} years old`);
+    } else {
+      console.log(`Dog number ${i + 1} is still a puppy 🐶`);
+    }
+  });
 }
 
-checkDogs();
+checkDogs(newDataSet1);
+console.log('------------------');
+checkDogs(newDataSet2);
