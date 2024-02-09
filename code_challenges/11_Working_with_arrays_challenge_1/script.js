@@ -65,6 +65,7 @@ is an adult, and is 5 years old") or a puppy ("Dog number 2 is still a puppy ðŸ
 /* Function */
 
 function checkDogs(data) {
+  console.log(data);
   data.forEach(function (dog, i) {
     if (dog >= 3) {
       console.log(`Dog number ${i + 1} is an adult, and is ${dog} years old`);
