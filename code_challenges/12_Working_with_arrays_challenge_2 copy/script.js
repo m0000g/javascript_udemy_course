@@ -29,18 +29,13 @@ const dataSet2 = [16, 6, 10, 5, 6, 1, 4];
 
 const calcAverageHumanAge = function (ages) {
   console.log(ages);
-  const humanAge = ages.map(age => {
-    if (age < 2) return age;
-    if (age === 2) return age * 2;
-    if (age > 2) return 16 + age * 4;
-  });
+  const humanAge = ages.map(age => (age <= 2 ? 2 * age : 16 + age * 4));
   console.log(humanAge);
   const onlyOver18YearsOld = humanAge.filter(age => age > 18);
   console.log(onlyOver18YearsOld);
   const averageAge =
-    onlyOver18YearsOld.reduce((acc, cur) => {
-      return acc + cur;
-    }, 0) / onlyOver18YearsOld.length;
+    onlyOver18YearsOld.reduce((acc, cur) => acc + cur, 0) /
+    onlyOver18YearsOld.length;
   console.log(`The average age of Dogs over 18 is: ${averageAge}`);
 };
 
